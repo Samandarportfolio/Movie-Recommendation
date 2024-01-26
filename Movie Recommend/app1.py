@@ -16,8 +16,8 @@ def fetch_poster(movie_id):
         st.error(f"Error fetching movie details: {e}")
         return None
 
-movies = pickle.load(open('movies.list.pkl', 'rb'))
-similarity = pickle.load(open('similarity.pkl', 'rb'))
+movies = pickle.load(open('Movie Recommend/movies.list.pkl', 'rb'))
+similarity = pickle.load(open('Movie Recommend/similarity.pkl', 'rb'))
 movie_list = movies['title'].values
 
 indices = dict(zip(movies['title'].str.lower(), range(len(movies))))
